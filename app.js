@@ -33,7 +33,7 @@ const onNavigate = async (pathname) => {
     history.pushState(
         {},
         pathname,
-        location.origin + '/' + pathname
+        pathname
     )
 
     await changePage(pathname)
