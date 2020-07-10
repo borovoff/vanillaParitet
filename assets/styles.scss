@@ -1,0 +1,51 @@
+@import 'scss/bootstrap.scss';
+@import 'carousel.css';
+@import 'full-slider.css';
+@import 'site.css';
+
+.movement-image {
+    width: 100%;
+}
+
+.center-image-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.center-image-container {
+    @media (min-width: 600px) {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.navbar-light {
+    .navbar-nav {
+        .navbar-brand {
+            img {
+                margin-bottom: 3px;
+            }
+        }
+        .nav-link {
+            color: black !important;
+            cursor: pointer;
+
+            &:hover {
+                color: black !important;
+                text-decoration: underline;
+            }
+        }
+
+        .active {
+            text-decoration: underline;
+        }
+    }
+}
+
+.without-bullet {
+    list-style: none;
+}
