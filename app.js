@@ -28,8 +28,10 @@ async function loadHome(pathname) {
 }
 
 const tokens = location.pathname.split('/')
+const t = tokens[tokens.length - 1]
+console.log(t)
 
-loadHome(tokens[tokens.length - 1])
+loadHome(t)
 
 const onNavigate = async (pathname) => {
     history.pushState(
