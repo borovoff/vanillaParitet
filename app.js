@@ -27,7 +27,9 @@ async function loadHome(pathname) {
     await changePage(pathname)
 }
 
-loadHome(location.pathname)
+const tokens = location.pathname.split('/')
+
+loadHome(tokens[tokens.length - 1])
 
 const onNavigate = async (pathname) => {
     history.pushState(
