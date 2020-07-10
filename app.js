@@ -9,7 +9,7 @@ async function fetchHtmlAsText(url) {
 }
 
 async function changePage(pathname) {
-    content.innerHTML = await fetchHtmlAsText((pathname === '/' ? 'main' : pathname) + '.html')
+    content.innerHTML = await fetchHtmlAsText(((pathname === '' || pathname === '/') ? 'main' : pathname) + '.html')
 }
 
 async function loadHome(pathname) {
@@ -33,7 +33,7 @@ const onNavigate = async (pathname) => {
     history.pushState(
         {},
         pathname,
-        location.origin + pathname
+        location.origin + '/' + pathname
     )
 
     await changePage(pathname)
