@@ -34,10 +34,11 @@ console.log(t)
 loadHome(t)
 
 const onNavigate = async (pathname) => {
+    console.log(pathname)
     history.pushState(
         {},
         pathname,
-        pathname
+        pathname ? pathname : '/'
     )
 
     await changePage(pathname)
